@@ -4,7 +4,6 @@ function counter(){
     let count = 0;
     return function(){
         count = count + 1;
-        return count;
         console.log(count);
 
     
@@ -12,5 +11,11 @@ function counter(){
 }
 
 const c = counter();
+c();
+c();
+c();
+c();
+c();
+
 console.log(c);
 
