@@ -1,194 +1,196 @@
-Phase 1: JS Basics – JavaScript se Strong Foundation
-Goal: JavaScript ki fundamentals itni solid karni ki aage DOM, React, Node sab easy lage. Yeh pura phase sirf core language pe focus hai.
+# Phase 1: JS Basics – JavaScript se Strong Foundation
 
-🛠 Setup
-Node.js install karo: https://nodejs.org
+**Goal:** JavaScript ki fundamentals itni solid karni ki aage DOM, React, Node sab easy lage. Yeh pura phase sirf **core language** pe focus hai.
 
-Verify: terminal / CMD me node -v aur npm -v run karo.
+---
 
-Is folder me project shuru karo:
+## 🛠 Setup
 
-npm init -y
+- Node.js install karo: https://nodejs.org
+- Verify: terminal / CMD me `node -v` aur `npm -v` run karo.
+- Is folder me project shuru karo:
+  - `npm init -y`
+  - `index.js` banao ya har task ke folder me `index.js` file rakho.
 
-index.js banao ya har task ke folder me index.js file rakho.
+---
 
-📚 Concepts to Learn
+## 📚 Concepts to Learn
 
-1. Variables & Types ✅
-   let / const use karo; var avoid karo (scope issues).
+### 1. Variables & Types ✅
 
-Primitive types: number, string, boolean, null, undefined, symbol, bigint.
+- `let` / `const` use karo; `var` avoid karo (scope issues).
+- Primitive types: `number`, `string`, `boolean`, `null`, `undefined`, `symbol`, `bigint`.
+- Non‑primitive: `object`, `array`, `function`.
+- `typeof` se type check karo.
 
-Non‑primitive: object, array, function.
+**📖 Read:**
 
-typeof se type check karo.
+- MDN – Data structures (types)
+- MDN – `let`, `const`, `var`
 
-📖 Read:
+---
 
-MDN – Data structures (types)
+### 2. Operators & Control Flow
 
-MDN – let, const, var
+- Arithmetic: `+ - * / % **`
+- Comparison: `==` vs `===` (strict equality use karo), `<`, `>`, `<=`, `>=`.
+- Logical: `&&`, `||`, `!`
+- Conditions: `if / else if / else`, `switch`, ternary `condition ? a : b`.
 
-2. Operators & Control Flow
-   Arithmetic: + - \* / % \*\*
+**📖 Read:**
 
-Comparison: == vs === (strict equality use karo), <, >, <=, >=.
+- MDN – Expressions and operators
+- MDN – `if…else`, `switch`
 
-Logical: &&, ||, !
+---
 
-Conditions: if / else if / else, switch, ternary condition ? a : b.
+### 3. Arrays (Go slices ka JS version)
 
-📖 Read:
+- Create: `const arr = [1, 2, 3];`
+- Read/Write: `arr[0]`, `arr[1] = 10`.
+- Common methods: `push`, `pop`, `shift`, `unshift`, `slice`, `splice`.
+- High‑level methods: `map`, `filter`, `reduce`, `find`, `some`, `every`.
 
-MDN – Expressions and operators
+**📖 Read:**
 
-MDN – if…else, switch
+- MDN – Array
 
-3. Arrays (Go slices ka JS version)
-   Create: const arr = [1, 2, 3];
+---
 
-Read/Write: arr[0], arr[1] = 10.
+### 4. Objects (Go structs / JS maps feel)
 
-Common methods: push, pop, shift, unshift, slice, splice.
+- Basic object: `const user = { id: 1, name: "Ram", age: 20 };`
+- Access: `user.name` / `user["name"]`
+- Add / update / delete properties.
+- Object destructuring: `const { name, age } = user;`
 
-High‑level methods: map, filter, reduce, find, some, every.
+**📖 Read:**
 
-📖 Read:
+- MDN – Working with objects
 
-MDN – Array
+---
 
-4. Objects (Go structs / JS maps feel)
-   Basic object: const user = { id: 1, name: "Ram", age: 20 };
+### 5. Functions & Parameters
 
-Access: user.name / user["name"]
+- Function declaration: `function add(a, b) { return a + b; }`
+- Function expression: `const add = function (a, b) { ... }`
+- Arrow function: `const add = (a, b) => a + b;`
+- Default parameters: `function greet(name = "Guest") { ... }`
+- Rest parameters (variadic feel): `function sum(...nums) {}`.
 
-Add / update / delete properties.
+**📖 Read:**
 
-Object destructuring: const { name, age } = user;
+- MDN – Functions
 
-📖 Read:
+---
 
-MDN – Working with objects
+### 6. Scope, Hoisting & Closures
 
-5. Functions & Parameters
-   Function declaration: function add(a, b) { return a + b; }
+- Scope:
+  - Global
+  - Function scope
+  - Block scope (`let` / `const`)
+- Hoisting: declarations upar jati hain, lekin `let/const` temporal dead zone me rehte.
+- Closure: function ko apne outer scope ke variables ka access rehta hai, chaahe outer function return ho chuka ho.
 
-Function expression: const add = function (a, b) { ... }
+**📖 Read:**
 
-Arrow function: const add = (a, b) => a + b;
+- MDN – Scope
+- MDN – Closures
 
-Default parameters: function greet(name = "Guest") { ... }
+---
 
-Rest parameters (variadic feel): function sum(...nums) {}.
+### 7. Strings & Template Literals
 
-📖 Read:
+- Normal string: `"hello"` ya `'hello'`.
+- Template literal: `` `Hello, ${name}!` ``
+- Useful methods: `toUpperCase`, `toLowerCase`, `includes`, `slice`, `split`, `trim`.
 
-MDN – Functions
+**📖 Read:**
 
-6. Scope, Hoisting & Closures
-   Scope:
+- MDN – String
 
-Global
+---
 
-Function scope
+### 8. Loops & Iteration
 
-Block scope (let / const)
+- `for`, `while`, `do...while` basic loops.
+- `for...of` arrays/iterables ke liye.
+- `for...in` objects ke keys ke liye.
+- Practice: normal loop vs `forEach` / `map`.
 
-Hoisting: declarations upar jati hain, lekin let/const temporal dead zone me rehte.
+**📖 Read:**
 
-Closure: function ko apne outer scope ke variables ka access rehta hai, chaahe outer function return ho chuka ho.
+- MDN – Loops and iteration
 
-📖 Read:
+---
 
-MDN – Scope
+### 9. Basic Error Handling
 
-MDN – Closures
+- Error create: `new Error("message")`.
+- `throw` se error throw karo.
+- `try { ... } catch (err) { ... } finally { ... }` use karke handle karo.
+- Message clear rakho, jaise `"Age must be a positive number"`.
 
-7. Strings & Template Literals
-   Normal string: "hello" ya 'hello'.
+**📖 Read:**
 
-Template literal: `Hello, ${name}!`
+- MDN – `try…catch`
 
-Useful methods: toUpperCase, toLowerCase, includes, slice, split, trim.
+---
 
-📖 Read:
+## ✅ Tasks (Khud Implement Karo)
 
-MDN – String
+### Task 1: Variables & Types ✅
 
-8. Loops & Iteration
-   for, while, do...while basic loops.
+`task-1/index.js` me:
 
-for...of arrays/iterables ke liye.
+- `name` (string), `age` (number), `isStudent` (boolean), `score` (undefined), `accountBalance` (null) declare karo.
+- Har variable ka value aur `typeof` console me print karo.
 
-for...in objects ke keys ke liye.
+---
 
-Practice: normal loop vs forEach / map.
+### Task 2: Simple CLI‑style Calculator ✅
 
-📖 Read:
+- 2 numbers aur ek operator (`+ - * /`) ke liye variables lo (start me hard‑coded).
+- `if/else` ya `switch` se operation select karo.
+- Division by zero pe `"Cannot divide by zero"` print karo.
+- Har case me result `console.log` karo.
 
-MDN – Loops and iteration
+---
 
-9. Basic Error Handling
-   Error create: new Error("message").
+### Task 3: Array Practice ✅
 
-throw se error throw karo.
+- Ek array: `const scores = [45, 67, 32, 89, 90, 55];`
+- `map` se har score me `+5` add karo.
+- `filter` se sirf `>= 50` wale scores rakho.
+- `reduce` se total aur average nikal ke print karo.
 
-try { ... } catch (err) { ... } finally { ... } use karke handle karo.
+---
 
-Message clear rakho, jaise "Age must be a positive number".
+### Task 4: User Object ✅
 
-📖 Read:
+- `user` object banao `{ id, name, email, age, isVerified }`.
+- `printUser(user)` function likho jo string print kare:
 
-MDN – try…catch
+  `User #1: Ram (ram@example.com) - Age: 20 - Verified: true`
 
-✅ Tasks (Khud Implement Karo)
-Task 1: Variables & Types ✅
-task-1/index.js me:
+- Destructuring use karke `name`, `email`, `age` alag variables me nikalo.
 
-name (string), age (number), isStudent (boolean), score (undefined), accountBalance (null) declare karo.
+---
 
-Har variable ka value aur typeof console me print karo.
+### Task 5: Utility Functions ✅
 
-Task 2: Simple CLI‑style Calculator ✅
-2 numbers aur ek operator (+ - \* /) ke liye variables lo (start me hard‑coded).
+- `isEven(n)` – even number pe `true`, otherwise `false`.
+- `maxOfThree(a, b, c)` – sabse bada return kare.
+- `greet(name = "Guest")` – `"Hello, <name>!"` return kare.
+- In teeno functions ko alag‑alag test cases ke sath call karo.
 
-if/else ya switch se operation select karo.
+---
 
-Division by zero pe "Cannot divide by zero" print karo.
+### Task 6: Scope & Closure ✅
 
-Har case me result console.log karo.
+`task-6/index.js` me:
 
-Task 3: Array Practice ✅
-Ek array: const scores = [45, 67, 32, 89, 90, 55];
-
-map se har score me +5 add karo.
-
-filter se sirf >= 50 wale scores rakho.
-
-reduce se total aur average nikal ke print karo.
-
-Task 4: User Object ✅
-user object banao { id, name, email, age, isVerified }.
-
-printUser(user) function likho jo string print kare:
-
-User #1: Ram (ram@example.com) - Age: 20 - Verified: true
-
-Destructuring use karke name, email, age alag variables me nikalo.
-
-Task 5: Utility Functions ✅
-isEven(n) – even number pe true, otherwise false.
-
-maxOfThree(a, b, c) – sabse bada return kare.
-
-greet(name = "Guest") – "Hello, <name>!" return kare.
-
-In teeno functions ko alag‑alag test cases ke sath call karo.
-
-Task 6: Scope & Closure ✅
-function counter() banao jo ek inner function return kare:
-
-js
 function counter() {
 let count = 0;
 return function () {
@@ -196,33 +198,36 @@ count++;
 console.log(count);
 };
 }
+
 const c = counter();
+c(); // 1
+c(); // 2
+c(); // 3
 
-c(); → 1
+- Comment me explain karo ki closure yahan kaise kaam kar raha hai.
 
-c(); → 2
+---
 
-c(); → 3
+### Task 7: String Utilities ✅
 
-Comment me explain karo ki closure yahan kaise kaam kar raha hai.
+- `toTitleCase(str)` likho jo `"hello world from js"` ko `"Hello World From Js"` banaye.
+- `isPalindrome(str)` likho jo spaces ignore karke check kare (`"nurses run"` → `true`).
+- Dono functions ko multiple inputs ke sath test karo.
 
-Task 7: String Utilities ✅
-toTitleCase(str) likho jo "hello world from js" ko "Hello World From Js" banaye.
+---
 
-isPalindrome(str) likho jo spaces ignore karke check kare ("nurses run" → true).
+### Task 8: Safe Divide (Error Handling) ✅
 
-Dono functions ko multiple inputs ke sath test karo.
+- `function safeDivide(a, b)` likho:
 
-Task 8: Safe Divide (Error Handling) ✅
-function safeDivide(a, b) likho:
+  - Agar `typeof a !== "number"` ya `typeof b !== "number"` ho to `throw new Error("Inputs must be numbers")`.
+  - Agar `b === 0` ho to `throw new Error("Cannot divide by zero")`.
+  - Warna result return karo.
 
-Agar typeof a !== "number" ya typeof b !== "number" ho to throw new Error("Inputs must be numbers").
+- `try/catch` me `safeDivide` call karo, success pe result print karo, error pe `"Error: <message>"` print karo.
 
-Agar b === 0 ho to throw new Error("Cannot divide by zero").
+---
 
-Warna result return karo.
+## ➡️ Next Step
 
-try/catch me safeDivide call karo, success pe result print karo, error pe "Error: <message>" print karo.
-
-➡️ Next Step
-Phase 1 ke saare tasks bina dekh ke likh pao aur concepts samajh aa jayein, tab Phase 2 – Functions & Objects wale folder me jao aur uska README follow karo.
+Phase 1 ke saare tasks bina dekh ke likh pao aur concepts samajh aa jayein, tab **Phase 2 – Functions & Objects** wale folder me jao aur uska README follow karo.
