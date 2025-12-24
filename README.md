@@ -41,4 +41,7 @@ Har phase ke folder me:
 
 ## 🔥 Goal
 
-- Har phase ke end pe ek
+- Har phase ke end pe ek **mini project / set of tasks** complete hoga.
+- Phase 5 ke baad tum **confidently JavaScript code likh paoge** (browser + Node dono ke liye strong base ban jayega).
+
+**Let’s code JS like a beast! 🚀**
