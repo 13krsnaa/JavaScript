@@ -15,13 +15,13 @@ const calculator = {
      }
 }
 
-console.log("Calculator.Sum() : ", calculator.sum());
+console.log("Calculator.Sum() : ", calculator.sum()); // 18
 
 //step 2 : isme loosesum object bnake calculator.sum ko call kia , and observed the behaviour
 
 
 const looseSum = calculator.sum;
- console.log("LoooseSum():", looseSum());
+ console.log("LoooseSum():", looseSum()); // NaN
 
  // step 3 : ab arrow function me kia same method ko 
 
@@ -35,6 +35,6 @@ const calculatorArrow = {
     }
 }
 
-console.log("CalculatorArrow.Sum() : ", calculatorArrow.sum());
+console.log("CalculatorArrow.Sum() : ", calculatorArrow.sum()); //Undefined
  
-//
+
