@@ -17,7 +17,7 @@ if(operator === '+'){
     console.log(input1 * input2);
  } 
  //make sure to handle the division by zero case
- 
+
  else if(operator === '/'){
      if (input2 !== 0){
         console.log(input1 / input2);
@@ -27,4 +27,5 @@ if(operator === '+'){
         }
      }
 
+    
  

@@ -15,9 +15,5 @@ const isStudent = true ;
 let score;
 console.log("Score :", score);
 console.log("Type :", typeof score);
-// Type Null 
- const nullVar = null;
-console.log("Null Value:", nullVar);
-console.log("Null Type:", typeof nullVar);
-console.log("---");
+
 
