@@ -1,14 +1,14 @@
 // Factory function to create a user object
- let factoryId = 1;
-  
-  const createUser = (name, age) => {
-       return {
-        id : factoryId++,
-        name : name,
-        age : age,
-        isAdult : age >= 18
-       };
+let factoryId = 1;
+
+const createUser = (name, age) => {
+  return {
+    id: factoryId++,
+    name: name,
+    age: age,
+    isAdult: age >= 18
   };
+};
 
 // Constructor Function 
 
@@ -33,8 +33,10 @@ console.log(user3);
 
 const user4 = new user("Chico", 22);
 const user5 = new user("Jerry", 21);
-const user6 = new user("IronFist",16);
+const user6 = new user("IronFist", 16);
 
 console.log(user4);
 console.log(user5);
 console.log(user6);
+
+//TAsk Completed
