@@ -1,6 +1,6 @@
-# Phase 5: DOM, Browser APIs & Mini Projects
+# 🚀 Phase 5: DOM, Browser APIs & Mini Projects
 
-**Goal:** Browser environment me JavaScript ko master karna – DOM handle karna, events manage karna, forms validate karna, localStorage use karna, aur chhote SPA‑style projects banana.
+**Goal:** Browser environment me JavaScript ko master karna – DOM handle karna, events manage karna, forms validate karna, localStorage use karna, aur chhote SPA-style projects banana.
 
 ---
 
@@ -57,7 +57,7 @@
 
 - `localStorage.setItem(key, value)` / `getItem`.
 - JSON ke sath store: `JSON.stringify` & `JSON.parse`.
-- Difference between localStorage (permanent) vs sessionStorage (tab‑based).
+- Difference between localStorage (permanent) vs sessionStorage (tab-based).
 
 **📖 Read:**
 
@@ -69,14 +69,14 @@
 
 - Reflows/repaints minimization – ek sath DOM changes karna.
 - Template strings + `innerHTML` vs `createElement`/`appendChild`.
-- Simple component‑like structure (function that creates/render karta hai).
+- Simple component-like structure (function that creates/render karta hai).
 
 ---
 
 ### 6. Single Page App Ka Basic Idea
 
 - Multiple views ko ek hi page me show/hide karna.
-- "Router‑like" behaviour: hash (`#home`, `#about`) ya simple buttons se sections switch.
+- "Router-like" behaviour: hash (`#home`, `#about`) ya simple buttons se sections switch.
 
 ---
 
@@ -130,7 +130,7 @@
 
 - `task-5/`:
   - UI: search input + ek `<div>` jisme "fake results" dikhte ho.
-  - `debounce(fn, delay)` utility likho (Phase‑4 se reuse).
+  - `debounce(fn, delay)` utility likho (Phase-4 se reuse).
   - Input change pe debounced handler call ho jo:
     - Console me "Searching for: <query>" log kare,
     - Aur UI me query text show kare (actual API call abhi nahi).

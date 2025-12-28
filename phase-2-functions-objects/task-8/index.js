@@ -18,7 +18,6 @@
       
           const userString = JSON.stringify(user);
 
-
           // JSON String
           console.log("UserString = " , userString);
           console.log("Type:", typeof userString);
