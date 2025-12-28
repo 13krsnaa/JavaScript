@@ -1,101 +1,114 @@
-Ab Phase‑4 ko advanced JS patterns ke liye use karte hain (closures pro level, iterators, generators, design patterns).
+# Phase 4: Advanced JavaScript & Patterns
 
-Phase 4: Advanced JavaScript & Patterns
-Goal: JavaScript ko deeper level pe samajhna – closures mastery, functional patterns, iterators/generators, aur common design patterns jo real‑world projects me kaam aate hain.
+**Goal:** JavaScript ko deeper level pe samajhna – closures mastery, functional patterns, iterators/generators, aur common design patterns jo real‑world projects me kaam aate hain.
 
-🛠 Setup
-phase-4-advanced-patterns/ folder me (optional) npm init -y.
+---
 
-Har task ke liye task-x/index.js banao aur node task-x/index.js se run karo.
+## 🛠 Setup
 
-📚 Concepts to Learn
+- `phase-4-advanced-patterns/` folder me (optional) `npm init -y`.
+- Har task ke liye `task-x/index.js` banao aur `node task-x/index.js` se run karo.
 
-1. Closures – Deep Dive
-   Closure = function + uska lexical scope; outer variables ko yaad rakhta hai.
+---
 
-Use‑cases: private data, function factories, once‑functions, memoization.
+## 📚 Concepts to Learn
 
-📖 Read:
+### 1. Closures – Deep Dive
 
-MDN – Closures
+- Closure = function + uska lexical scope; outer variables ko yaad rakhta hai.
+- Use‑cases: private data, function factories, once‑functions, memoization.
 
-2. Currying & Partial Application
-   Currying: f(a, b, c) ko f(a)(b)(c) style me todna.
+**📖 Read:**
 
-Partial application: kuch arguments fix karke naya function banana.
+- MDN – Closures
 
-📖 Read:
+---
 
-JavaScript Info – Currying
+### 2. Currying & Partial Application
 
-3. Higher‑Order Functions
-   Jo function dusre function ko input le ya output me de.
+- Currying: `f(a, b, c)` ko `f(a)(b)(c)` style me todna.
+- Partial application: kuch arguments fix karke naya function banana.
 
-Examples: map, filter, reduce, custom once, debounce, throttle.
+**📖 Read:**
 
-📖 Read:
+- JavaScript Info – Currying
 
-MDN – Array.prototype.map / filter / reduce
+---
 
-4. Iterators & Generators
-   Iterator protocol: object with next() method returning { value, done }.
+### 3. Higher‑Order Functions
 
-Generator function: function\* + yield se iterators likhna easy hota hai.
+- Jo function dusre function ko input le ya output me de.
+- Examples: map, filter, reduce, custom once, debounce, throttle.
 
-📖 Read:
+**📖 Read:**
 
-MDN – Iterators and generators
+- MDN – Array.prototype.map / filter / reduce
 
-5. Module Patterns
-   ES modules: export / import.
+---
 
-Old IIFE pattern for private scope.
+### 4. Iterators & Generators
 
-Why modules help: encapsulation, reuse, separation of concerns.
+- Iterator protocol: object with `next()` method returning `{ value, done }`.
+- Generator function: `function*` + `yield` se iterators likhna easy hota hai.
 
-📖 Read:
+**📖 Read:**
 
-MDN – ES modules
+- MDN – Iterators and generators
 
-6. Common Design Patterns (JS Version)
-   Module pattern.
+---
 
-Revealing module pattern.
+### 5. Module Patterns
 
-Observer / Pub‑Sub pattern.
+- ES modules: `export` / `import`.
+- Old IIFE pattern for private scope.
+- Why modules help: encapsulation, reuse, separation of concerns.
 
-Singleton basic idea.
+**📖 Read:**
 
-📖 Read:
+- MDN – ES modules
 
-JavaScript Info – Design patterns overview
+---
 
-7. Performance & Optimization Basics
-   Avoid unnecessary work in loops, caching results (memoization).
+### 6. Common Design Patterns (JS Version)
 
-DOM heavy kaam me debouncing/throttling.
+- Module pattern.
+- Revealing module pattern.
+- Observer / Pub‑Sub pattern.
+- Singleton basic idea.
 
-Big O ka basic sense (O(n), O(n²)).
+**📖 Read:**
 
-✅ Tasks (Khud Implement Karo)
-Task 1: Counter Variations (Closures) ✅
-task-1/index.js:
+- JavaScript Info – Design patterns overview
 
-createCounter() likho jo increment, decrement, getValue methods ke sath object return kare, jisme internal count private ho (sirf closure se access).
+---
 
-2 alag counters banao (counterA, counterB) aur verify karo ki dono ka state independent hai.
+### 7. Performance & Optimization Basics
 
-Task 2: Once Function ✅
-task-2/index.js:
+- Avoid unnecessary work in loops, caching results (memoization).
+- DOM heavy kaam me debouncing/throttling.
+- Big O ka basic sense (O(n), O(n²)).
 
-once(fn) higher‑order function banao jo koi bhi function le aur aisa naya function return kare jo sirf pehli call pe fn run kare, baad me previous result hi return kare.
+---
 
-Example:
+## ✅ Tasks (Khud Implement Karo)
 
+### Task 1: Counter Variations (Closures) ✅
+
+- `task-1/index.js`:
+  - `createCounter()` likho jo increment, decrement, getValue methods ke sath object return kare, jisme internal count private ho (sirf closure se access).
+  - 2 alag counters banao (counterA, counterB) aur verify karo ki dono ka state independent hai.
+
+---
+
+### Task 2: Once Function ✅
+
+- `task-2/index.js`:
+  - `once(fn)` higher‑order function banao jo koi bhi function le aur aisa naya function return kare jo sirf pehli call pe fn run kare, baad me previous result hi return kare.
+  - Example:
+
+```js
 const init = once(() => console.log("Initialized"));
-
 init(); init(); init(); → "Initialized" sirf ek baar print ho.
-
 Task 3: Curry Function ✅
 task-3/index.js:
 
@@ -129,8 +142,8 @@ task-6/index.js:
 Upar wale range ka generator version likho:
 
 js
-function\* range(start, end) {
-// yield values
+function* range(start, end) {
+  // yield values
 }
 for...of se generator iterate karo.
 
@@ -155,10 +168,10 @@ IIFE se UserStore module banao jisme private users array ho:
 
 js
 const UserStore = (function () {
-const users = [];
-function addUser(user) { ... }
-function getUsers() { ... }
-return { addUser, getUsers };
+  const users = [];
+  function addUser(user) { ... }
+  function getUsers() { ... }
+  return { addUser, getUsers };
 })();
 Bahar se sirf returned methods accessible hone chahiye, users direct nahi.
 
@@ -188,3 +201,4 @@ Closures, currying, generators, patterns comfortable lagne lagte,
 Aur tum in utilities ko khud se likh sako,
 
 tab is JS mastery repo ke upar apna khud ka mini framework / library banane ki planning start karo (jaise chhota state manager, chhota event system, ya utility library) – ye sab concepts us project me use karoge.
+```
