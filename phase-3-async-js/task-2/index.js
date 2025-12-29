@@ -33,7 +33,7 @@ function fakeFetch(url, cb){
          }
 
          console.log("Posts :", posts.data);
-         console.log("Done ");
+         console.log(" ALL set");
        });
    });
 }
