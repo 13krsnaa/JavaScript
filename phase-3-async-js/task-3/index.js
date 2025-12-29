@@ -37,7 +37,7 @@ function fakeFetch(url) {
               fakeFetch("/user")
   .then(response => {
     console.log(" Raw user data:", response.data);
-    const user = { name: "Keshav", from: response.data };
+    const user = { name: "Krishna", from: response.data };
     return user; // Step 1 output
   })
   .then(user => {
