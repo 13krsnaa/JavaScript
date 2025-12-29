@@ -15,7 +15,7 @@ Promise.resolve().then(() => {     // isme promise().resolve().then() Promise ke
 
 
 console.log("End");
-
+console.log("End");
 /*  EVENT LOOP PRIORITY (Top to Bottom):
 =====================================
 
@@ -33,4 +33,4 @@ console.log("End");
    setTimeout() , Print 4th
 */
 
-
+// setup
