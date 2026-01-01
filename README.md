@@ -1,7 +1,5 @@
 # 🚀 JavaScript Mastery – Learn by Doing
 
-Tu already **thoda HTML/CSS, thoda backend concepts** jaanta hai. Ab target hai pure JavaScript ko master level pe samajhna – fundamentals se leke advanced patterns tak, sirf practice se.
-
 ---
 
 ## 📁 5 Phases – JS Focused (No Copy, Only Concepts & Tasks)
