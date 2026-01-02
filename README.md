@@ -1,4 +1,4 @@
-# 🚀 JavaScript Mastery – Learn by Doing
+# 🚀 JavaScript – Learn by Doing
 
 ---
 
