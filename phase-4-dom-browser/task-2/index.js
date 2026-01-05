@@ -9,8 +9,12 @@ function oonce(fn){
             called = true; //ab function call ho chuka
             result = fn(x);
             return result;
+        } else {
+            return result;
+        }
+        return results //ye function ka result return krega
+        
+        }
         }
              
-        } 
-         
-     }
+        
