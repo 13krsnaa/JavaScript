@@ -25,15 +25,15 @@ function throttle(fn, delay) {
 // TEST
 const debounced = debounce(() => {
   console.log("Debounced fired");
-}, 5000);
+}, 1000);
 
 const throttled = throttle(() => {
   console.log("Throttle fired");
-}, 5000);
+}, 1000);
 
 //RAPID Call
 setInterval(() => {
   debounced();
   throttled();
   console.log("Call");
-}, 300);
+}, 30);
